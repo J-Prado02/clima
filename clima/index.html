@@ -1,45 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clima</title>
+
     <link rel="stylesheet" href="css/styles.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="js/scripts.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js" defer></script>
+    <script src="js/scripts.js" defer></script>
+</head>
+
 <body>
-    <div class="container">
-        <div class="form">
-            <h3>Confira o clima de uma cidade:</h3>
-            <div class="form-imput-container">
-                <input type="text" placeholder="Digite o nome da cidade" id="city-input">
-                <button id="search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </div>
-        </div>
-        <div id="weather-data">
-            <h2>
-                <i class="fa-solid fa-location-dot"></i>
-                <span id="city">Maceió</span>
-                <img src="https://flagsapi.com/BR/flat/64.png" id="country">            </h2>
-            <p id="temperature"><span>38</span>&deg;C</p>
-                <p id="description">Nublado</p>
-                <img src="http://openweathermap.org/img/wn/01d.png" alt="Condições do tempo" id="weather-icon">
-        </div>
-        <div id="details-container">
-            <p id="umidity">
-                <i class="fa-solid fa-droplet"></i>
-                <span>48%</span>
-            </p>
-            <p id="wind">
-                <i class="fa-solid fa-wind"></i>
-                <span>3Km/h</span>
-            </p>
+
+<div class="container">
+
+    
+    <div class="form">
+        <h3>Confira o clima de uma cidade:</h3>
+
+        <div class="form-input-container">
+            <input 
+                type="text" 
+                placeholder="Cidade, País (ex: Curitiba, br)" 
+                id="city-input"
+            >
+
+            <button id="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
         </div>
     </div>
+
+    
+    <div id="weather-data" class="hide">
+
+        <h2>
+            <i class="fa-solid fa-location-dot"></i>
+            <span id="city"></span>
+            <img src="" id="country">
+        </h2>
+
+        <p id="temperature">
+            <span></span>&deg;C
+        </p>
+
+        <div id="description-container">
+            <p id="description"></p>
+            <img 
+                src="" 
+                alt="Condições do tempo" 
+                id="weather-icon"
+            >
+        </div>
+
+    </div>
+
+    
+    <div id="details-container" class="hide">
+
+        <p id="humidity">
+            <i class="fa-solid fa-droplet"></i>
+            <span></span>
+        </p>
+
+        <p id="wind">
+            <i class="fa-solid fa-wind"></i>
+            <span></span>
+        </p>
+
+    </div>
+
+   
+    <div id="map" class="hide"></div>
+
+</div>
+
 </body>
 </html>
