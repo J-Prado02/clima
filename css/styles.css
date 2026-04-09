@@ -9,7 +9,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .hide{
@@ -17,14 +17,11 @@ body{
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.15); /* transparência */
-    backdrop-filter: blur(12px); /* efeito vidro */
-    -webkit-backdrop-filter: blur(12px); /* compatibilidade */
-
-    border: 1px solid rgba(255, 255, 255, 0.2); /* borda sutil */
-
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* profundidade */
-
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
     padding: 2rem;
     color: #fff;
@@ -65,7 +62,6 @@ body{
     text-align: center;
     font-weight: bold;
     letter-spacing: 3px;
-
 }
 
 #weather-data h2{
@@ -93,14 +89,12 @@ body{
     justify-content: center;
     align-items: center;
     margin: 0.6rem 0;
-    
 }
 
 #description{
     font-size: 1rem;
     font-weight: bold;
 }
-
 
 #details-container{
     display: flex;
@@ -121,10 +115,6 @@ body{
 }
 
 body {
-    transition: background 0.5s ease;
-}
-
-body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -132,21 +122,21 @@ body {
 }
 
 body.clear {
-    background-image: url("/images/Clear.png");
+    background-image: url("../images/Clear.png");
 }
 
 body.clouds {
-    background-image: url("/images/Cloud.png");
+    background-image: url("../images/Cloud.png");
 }
 
 body.rain {
-    background-image: url("/images/Rain.png");
+    background-image: url("../images/Rain.png");
 }
 
 body.thunderstorm {
-    background-image: url("/images/Thunderstorm.png");
+    background-image: url("../images/Thunderstorm.png");
 }
 
 body.snow {
-    background-image: url("/images/Snow.png");
+    background-image: url("../images/Snow.png");
 }
