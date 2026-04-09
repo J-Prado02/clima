@@ -9,9 +9,9 @@ body {
     background: linear-gradient(180deg, #594cee 0%, #8dd0f5 100%);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* permite scroll quando conteúdo é maior que a tela */
     min-height: 100vh;
-    padding: 1rem;
+    padding: 2rem 1rem; /* respiro em cima e embaixo */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -33,6 +33,7 @@ body {
     color: #fff;
     width: 100%;
     max-width: 480px;
+    margin: auto; /* centraliza verticalmente quando há espaço */
 }
 
 .form h3 {
@@ -137,6 +138,10 @@ body {
 
 /* ── Tablet (600px – 1024px) ── */
 @media (min-width: 600px) {
+    body {
+        padding: 2.5rem 1.5rem;
+    }
+
     .container {
         padding: 2.5rem;
     }
@@ -160,6 +165,11 @@ body {
 
 /* ── Desktop (1024px+) ── */
 @media (min-width: 1024px) {
+    body {
+        align-items: center; /* no desktop centraliza verticalmente */
+        padding: 3rem 2rem;
+    }
+
     .container {
         max-width: 520px;
         padding: 3rem;
@@ -184,6 +194,10 @@ body {
 
 /* ── Telas muito pequenas (abaixo de 360px) ── */
 @media (max-width: 360px) {
+    body {
+        padding: 1rem 0.75rem;
+    }
+
     .container {
         padding: 1.2rem;
         border-radius: 0.7rem;
